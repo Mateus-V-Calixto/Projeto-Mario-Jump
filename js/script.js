@@ -1,6 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const nuvem = document.querySelector('.nuvem');
+const butao = document.querySelector('.reset');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -28,6 +29,7 @@ const loop = setInterval(() => {
         mario.style.animation = 'none'
         mario.style.bottom = `${marioPosition}px`
 
+        butao.style.left = '50%'
 
         mario.src = './imagem/game-over.png'
         mario.style.width = '80px'
@@ -38,4 +40,8 @@ const loop = setInterval(() => {
 
 },10)
 
+
+
+
 document.addEventListener('keydown', jump);
+document.addEventListener('click', jump);
